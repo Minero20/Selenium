@@ -1,0 +1,14 @@
+ await driver.get('https://e621.net/popular');
+await driver.wait(until.titleIs('Popular - e621'), 1000);
+const btn = await driver.findElement(By.id('guest-warning-accept'));
+await driver.wait(until.elementIsVisible(btn), 20000);
+await driver.wait(until.elementIsEnabled(btn), 20000);
+await btn.click();
+const image = await driver.findElement(By.css('img[src="https://static1.e621.net/data/preview/c1/f4/c1f4193e80bebcf018c70c7f3b4bf248.jpg"]'));
+await driver.wait(until.elementIsVisible(image), 20000);
+await driver.wait(until.elementIsEnabled(image), 20000);
+await image.click();
+const video = await driver.findElement(By.id('image'));
+await driver.wait(until.elementIsVisible(video), 20000);
+await driver.wait(until.elementIsEnabled(video), 20000);
+await video.click();

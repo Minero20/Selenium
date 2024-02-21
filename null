@@ -1,0 +1,7 @@
+Exception ignored in: <function ZipFile.__del__ at 0x000001DF09FEC400>
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1916, in __del__
+    self.close()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1933, in close
+    self.fp.seek(self.start_dir)
+ValueError: I/O operation on closed file.
